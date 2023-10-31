@@ -1,5 +1,5 @@
 #these comments are things ive learned in the process of doing this project and could be useful for RST
-# Note :.2f displays the number 2 digits after decimal instad of a big decimal number very useful for money calculations
+# Note :.2f displays the number 2 digits after decimal instad of a big decimal number very useful for money calculations it's a float format tool
 # Note you can assign values to items in a list so long as you know what the potential input might be in my case its "Large" or "Extra Large"
 # then it takes the string the user has typed and ascociates it the the value in my case 6.00 or 10.00 
 #kinda like a reverse if statement the way i think of it 
