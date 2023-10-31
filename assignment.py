@@ -9,13 +9,10 @@
 while True :   
 
     pizza_costs = {"Large": 6.00, "XL": 10.00}
-    topping_costs = {1: 1.00, 2: 1.75, 3: 2.50, 4: 3.35}
+    topping_costs = {"1": 1.00, "2": 1.75, "3": 2.50, "4": 3.35}
     HST = 0.13
-    try:
-        pizza_size = input("Enter pizza size (Large or XL): ")
-        toppings = int(input("Enter number of toppings (1-4): "))
-    except Exception:
-        print("INVALID")
+    pizza_size = input("Enter pizza size (Large or XL): ")
+    toppings = str(input("Enter number of toppings (1-4): "))
     subtotal = pizza_costs[pizza_size] + topping_costs[toppings]
     tax = subtotal * HST
     total = subtotal + tax
@@ -24,7 +21,7 @@ while True :
     print(f"Subtotal: ${subtotal:.2f}")
     print(f"Tax: ${tax:.2f}")
     print(f"Total: ${total:.2f}")
-    again = str(input("Do you want anoher pizza "))
+    again = str(input("Do you wish to order another pizza? "))
     if again == "yes":
         continue
     else: 
