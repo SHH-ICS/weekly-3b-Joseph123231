@@ -1,80 +1,32 @@
-import math
-lGtopping1tax = (1.00 + 6.00 + 0.91)
-LGtopping2tax = (1.75 + 6.00 + 1.01)
-LGtopping3tax = (2.50 + 6.00 + 1.11)
-LGtopping4tax = (3.35 + 6.00 + 1.22)
+#these comments are things ive learned in the process of doing this project and could be useful for RST
+# Note :.2f displays the number 2 digits after decimal instad of a big decimal number very useful for money calculations
+# Note you can assign values to items in a list so long as you know what the potential input might be in my case its "Large" or "Extra Large"
+# then it takes the string the user has typed and ascociates it the the value in my case 6.00 or 10.00 
+#kinda like a reverse if statement the way i think of it 
 
-XLtopping1tax = (1.00 + 10.00 + 1.43)
-XLtopping2tax = (1.75 + 10.00 + 1.53)
-XLtopping3tax = (2.50 + 10.00 + 1.63)
-XLtopping4tax = (3.35 + 10.00 + 1.74)
-print("\nWelcome to pythonHut\n")
-pizza_yn = str(input("Do you want a pizza: "))
-bill = ''
-while True:
-    if pizza_yn == "yes":
-        print("\nGreat let's get started! ")
-        size = input("\nwhat size do you want your pizza to be, Large or XL: ")
-        num_toppings = str(input("you can have anwhere from 1-4 toppings "))
-    if size == 'Large' or 'large' and num_toppings == '1':
-         print(f"\nYou chose a {size} pizza with {num_toppings} topping and your total is ${lGtopping1tax}")
-         again = input("\nWould you like to order another pizza? ")
-         if again == 'yes':
-                continue
-         else: 
-                   print("Hope you enjoy your pizza! ")
-    elif size == 'Large' or 'large' and num_toppings == '2':
-             print(f"\nYou chose a {size} pizza with {num_toppings} toppings and your total is ${LGtopping2tax}")
-             again = input("\nWould you like to order another pizza? ")
-             if again == 'yes':
-                continue
-             else: 
-                   print("Hope you enjoy your pizza! ")
-    elif size == 'Large' or 'large' and num_toppings == '3':
-             print(f"\nYou chose a {size} pizza with {num_toppings} toppings and your total is ${LGtopping3tax}")
-             again = input("\nWould you like to order another pizza? ")
-             if again == 'yes':
-                continue
-             else: 
-                   print("Hope you enjoy your pizza! ")
-    elif size == 'Large' or 'large' and num_toppings == '4':
-            print(f"\nYou chose a {size} pizza with {num_toppings} toppings and your total is ${LGtopping4tax}")
-            again = input("\nWould you like to order another pizza? ")
-            if again == 'yes':
-                continue
-            else: 
-                   print("Hope you enjoy your pizza! ")
-            
+# if user inputs large and 2 toppings it calls large from the list and it's value of 6.00 and it calls 2 for the list topping_costs and it's value of 1.75 and uses that to calculate subtotal
+#so the names Large and XL represent to numerical value 
+while True :   
 
-#XL 
-    elif size == 'XL' and num_toppings == '1':
-             print(f"\nYou chose a {size} pizza with {num_toppings} topping and your total is ${XLtopping1tax}")
-             again = input("\nWould you like to order another pizza? ")
-             if again == 'yes':
-                continue
-             else: 
-                   print("Hope you enjoy your pizza! ")
-    elif size == 'XL' and num_toppings == '2':
-             print(f"\nYou chose a {size} pizza with {num_toppings} toppings and your total is ${XLtopping2tax}")
-             again = input("\nWould you like to order another pizza? ")
-             if again == 'yes':
-                continue
-             else: 
-                   print("Hope you enjoy your pizza!")
-    elif size == 'XL' and num_toppings == '3':
-            print(f"\nYou chose a {size} pizza with {num_toppings} toppings and your total is ${XLtopping3tax}")
-            again = input("\nWould you like to order another pizza? ")
-            if again == 'yes':
-                continue
-            else: 
-                   print("Hope you enjoy your pizza! ")
-    elif size == 'XL' and num_toppings == '4':
-            print(f"\nYou chose a {size} pizza with {num_toppings} toppings and your total is ${XLtopping4tax}")
-            again = input("\nWould you like to order another pizza? ")
+    pizza_costs = {"Large": 6.00, "XL": 10.00}
+    topping_costs = {1: 1.00, 2: 1.75, 3: 2.50, 4: 3.35}
+    HST = 0.13
+    try:
+        pizza_size = input("Enter pizza size (Large or XL): ")
+        toppings = int(input("Enter number of toppings (1-4): "))
+    except Exception:
+        print("INVALID")
+    subtotal = pizza_costs[pizza_size] + topping_costs[toppings]
+    tax = subtotal * HST
+    total = subtotal + tax
 
-    if again == 'yes':
-          continue
-   
-    
-    else:
+    print(f"\nYou ordered a {pizza_size} pizza with {toppings} toppings so your ...\n ")
+    print(f"Subtotal: ${subtotal:.2f}")
+    print(f"Tax: ${tax:.2f}")
+    print(f"Total: ${total:.2f}")
+    again = str(input("Do you want anoher pizza "))
+    if again == "yes":
+        continue
+    else: 
+        print("\nEnjoy your pizza!! \n")
         break
