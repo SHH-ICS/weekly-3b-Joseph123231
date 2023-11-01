@@ -1,4 +1,4 @@
-#this program is very innefficant and i know that but by the time i was done i needed to start on php/html 
+#this program is very inefficient and i know that but by the time i was done i needed to start on php/html 
 # Sorry it's such a long program that does not need to be long
 # I spent too much time perfecting this that i ran out of time to make a simple version 
 import math
