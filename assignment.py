@@ -16,8 +16,8 @@ while True:
     else: 
         print("\nTerminated")
     
-    size = input("\nwhat size do you want your pizza to be, Large or XL: ")
-    num_toppings = str(input("you can have anwhere from 1-4 toppings "))
+size = input("\nwhat size do you want your pizza to be, Large or XL: ")
+num_toppings = str(input("you can have anwhere from 1-4 toppings "))
     if size == 'Large' or 'large' and num_toppings == '1':
          print(f"\nYou chose a {size} pizza with {num_toppings} topping and your total is ${lGtopping1tax}")
     
