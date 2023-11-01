@@ -36,8 +36,10 @@ while True:
          again = input("\nWould you like to order another pizza? ")
          if again == 'yes':
                 continue
-         else: 
-                   print("Hope you enjoy your pizza! ")
+         else:
+            print("Hope you enjoy your pizza! ")
+            break
+            
     elif size.lower() ==  'large' and num_toppings == '2':
          print(f"\nSubtotal: ${LGtopping2tax:.2f} ")
          print(f"Tax: ${lg2tax:.2f}")
@@ -47,7 +49,9 @@ while True:
          if again == 'yes':
                 continue
          else: 
-                   print("Hope you enjoy your pizza! ")
+            print("Hope you enjoy your pizza! ")
+            break
+           
     elif size.lower() == 'large' and num_toppings == '3':
              print(f"\nSubtotal: ${LGtopping3tax:.2f} ")
              print(f"Tax: ${lg3tax:.2f}")
@@ -55,8 +59,9 @@ while True:
              again = input("\nWould you like to order another pizza? ")
              if again == 'yes':
                 continue
-             else: 
-                   print("Hope you enjoy your pizza! ")
+             else:
+                print("Hope you enjoy your pizza! ") 
+                break
     elif size.lower() ==  'large' and num_toppings == '4':
             print(f"\nSubtotal: ${LGtopping4tax:.2f} ")
             print(f"Tax: ${lg4tax:.2f}")
@@ -65,7 +70,8 @@ while True:
             if again == 'yes':
                 continue
             else: 
-                   print("Hope you enjoy your pizza! ")
+                print("Hope you enjoy your pizza! ")
+                break
             
 
 #XL 
@@ -76,8 +82,9 @@ while True:
             again = input("\nWould you like to order another pizza? ")
             if again == 'yes':
                 continue
-            else: 
-                   print("Hope you enjoy your pizza! ")
+            else:
+                print("Hope you enjoy your pizza! ") 
+                break
             
     elif size.upper() == 'XL' and num_toppings == '2':
             print(f"\nSubtotal: ${XLtopping2tax:.2f} ")
@@ -87,7 +94,8 @@ while True:
             if again == 'yes':
                 continue
             else:
-                   print("Hope you enjoy your pizza! ")
+                print("Hope you enjoy your pizza! ")
+                break
     elif size.upper() == 'XL' and num_toppings == '3':
             print(f"\nSubtotal: ${XLtopping3tax:.2f} ")
             print(f"Tax: ${xltax3:.2f}")
@@ -96,7 +104,8 @@ while True:
             if again == 'yes':
                 continue
             else:
-                   print("Hope you enjoy your pizza! ")
+                print("Hope you enjoy your pizza! ")
+                break
             
     elif size.upper() == 'XL' and num_toppings == '4':
             print(f"\nSubtotal: ${XLtopping4tax:.2f} ")
