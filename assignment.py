@@ -25,20 +25,25 @@ while True:
     if pizza_yn.lower() == "yes":
         print("\nGreat let's get started! ")
     else:
-         print("TERMINATED")
+         print("\n ORDER TERMINATED\n")
          break
+    
     size = input("\nwhat size do you want your pizza to be, Large or XL: ")
     num_toppings = str(input("you can have anwhere from 1-4 toppings "))
+    
+    
     if size.lower() ==  'large' and num_toppings == '1':
-         print(f"\nSubtotal: ${lGtopping1tax:.2f} ")
-         print(f"Tax: ${lg1tax:.2f}")
-         print(f"Total: ${lg1tax + lGtopping1tax:.2f}")
-         again = input("\nWould you like to order another pizza? ")
-         if again == 'yes':
+        print(f"\nSubtotal: ${lGtopping1tax:.2f} ")
+        print(f"Tax: ${lg1tax:.2f}")
+        print(f"Total: ${lg1tax + lGtopping1tax:.2f}")
+        again = input("\nWould you like to order another pizza? ")
+        if again == 'yes':
                 continue
-         else:
-            print("Hope you enjoy your pizza! ")
-            break
+        else:
+                    print("Hope you enjoy your pizza! ")
+                    break
+
+
             
     elif size.lower() ==  'large' and num_toppings == '2':
          print(f"\nSubtotal: ${LGtopping2tax:.2f} ")
@@ -117,3 +122,4 @@ while True:
             else:
                 print("Hope you enjoy your pizza! ")
                 break
+            
