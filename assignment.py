@@ -26,13 +26,10 @@ while True:
         print("\nGreat let's get started! ")
     size = input("\nwhat size do you want your pizza to be, Large or XL: ")
     num_toppings = str(input("you can have anwhere from 1-4 toppings "))
-
     if size.lower() ==  'large' and num_toppings == '1':
          print(f"\nSubtotal: ${lGtopping1tax:.2f} ")
          print(f"Tax: ${lg1tax:.2f}")
          print(f"Total: ${lg1tax + lGtopping1tax:.2f}")
-              
-    
          again = input("\nWould you like to order another pizza? ")
          if again == 'yes':
                 continue
