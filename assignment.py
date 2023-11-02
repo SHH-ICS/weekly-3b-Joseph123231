@@ -24,6 +24,9 @@ pizza_yn = str(input("Do you want to order a pizza: "))
 while True:
     if pizza_yn.lower() == "yes":
         print("\nGreat let's get started! ")
+    else:
+         print("TERMINATED")
+         break
     size = input("\nwhat size do you want your pizza to be, Large or XL: ")
     num_toppings = str(input("you can have anwhere from 1-4 toppings "))
     if size.lower() ==  'large' and num_toppings == '1':
@@ -71,7 +74,7 @@ while True:
                 break
             
 
-#XL 
+#XL
     elif size.upper() == 'XL' and num_toppings == '1':
             print(f"\nSubtotal: ${XLtopping1tax:.2f} ")
             print(f"Tax: ${xltax1:.2f}")
