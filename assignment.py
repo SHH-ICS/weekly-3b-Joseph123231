@@ -1,6 +1,5 @@
 #this program is very inefficient and i know that but by the time i was done i needed to start on php/html 
 # Sorry it's such a long program that does not need to be long
-# I spent too much time perfecting this that i ran out of time to make a simple version 
 import math
 lGtopping1tax = (1.00 + 6.00 )
 lg1tax = (0.91)
@@ -31,19 +30,13 @@ while True:
     size = input("\nwhat size do you want your pizza to be, Large or XL: ")
     num_toppings = str(input("you can have anwhere from 1-4 toppings "))
 
-    if size.lower() != 'large':
+    if size.lower() != 'large' and size.upper() != 'XL':
       print("Please select a valid size!")
       break
     if num_toppings > '4' or num_toppings < '1':
       print("Please enter a valid NUMBER of toppings (1-4) ")
       break
-#XL test case
-    if size.upper() != 'XL':
-      print("Please select a valid size!")
-      break
-    if num_toppings > '4' or num_toppings < '1':
-      print("Please enter a valid NUMBER of toppings (1-4) ")
-      break
+
     
     if size.lower() ==  'large' and num_toppings == '1':
         print(f"\nSubtotal: ${lGtopping1tax:.2f} ")
