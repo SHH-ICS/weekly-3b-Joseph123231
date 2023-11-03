@@ -30,7 +30,20 @@ while True:
     
     size = input("\nwhat size do you want your pizza to be, Large or XL: ")
     num_toppings = str(input("you can have anwhere from 1-4 toppings "))
-    
+
+    if size.lower() != 'large':
+      print("Please select a valid size!")
+      break
+    if num_toppings > '4' or num_toppings < '1':
+      print("Please enter a valid NUMBER of toppings (1-4) ")
+      break
+#XL test case
+    if size.upper() != 'XL':
+      print("Please select a valid size!")
+      break
+    if num_toppings > '4' or num_toppings < '1':
+      print("Please enter a valid NUMBER of toppings (1-4) ")
+      break
     
     if size.lower() ==  'large' and num_toppings == '1':
         print(f"\nSubtotal: ${lGtopping1tax:.2f} ")
@@ -42,8 +55,7 @@ while True:
         else:
                     print("Hope you enjoy your pizza! ")
                     break
-
-
+    
     elif size.lower() ==  'large' and num_toppings == '2':
          print(f"\nSubtotal: ${LGtopping2tax:.2f} ")
          print(f"Tax: ${lg2tax:.2f}")
@@ -55,7 +67,8 @@ while True:
          else: 
             print("Hope you enjoy your pizza! ")
             break
-           
+         
+    
     elif size.lower() == 'large' and num_toppings == '3':
              print(f"\nSubtotal: ${LGtopping3tax:.2f} ")
              print(f"Tax: ${lg3tax:.2f}")
