@@ -44,7 +44,6 @@ while True:
                     break
 
 
-            
     elif size.lower() ==  'large' and num_toppings == '2':
          print(f"\nSubtotal: ${LGtopping2tax:.2f} ")
          print(f"Tax: ${lg2tax:.2f}")
@@ -122,4 +121,3 @@ while True:
             else:
                 print("Hope you enjoy your pizza! ")
                 break
-            
