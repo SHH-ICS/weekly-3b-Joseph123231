@@ -43,14 +43,14 @@ while True:
         again = input("\nWould you like to order another pizza? ")
                 
     if again == 'yes':
-                    continue
-    else:
-                    print("Hope you enjoy your pizza! ")
-                    #break
-    
-    if size.lower() != 'large':
-            print("Please select a valid size!")
+            continue
+else:
+                print("Hope you enjoy your pizza! ")
             break
+
+if size.lower() != 'large':
+print("Please select a valid size!")
+        break
     if num_toppings > '4' or num_toppings < '1':
             print("Please enter a valid NUMBER of toppings (1-4) ")
             break     
