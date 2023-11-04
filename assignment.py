@@ -18,8 +18,8 @@ XLtopping3tax = (12.50)
 xltax3 = (1.63)
 XLtopping4tax = (13.35)
 xltax4 = (1.74)
-print("\nWelcome to pythonHut! \n")
-pizza_yn = str(input("Do you want to order a pizza: ")) 
+print("\nWelcome to pythonHUT! \n")
+pizza_yn = str(input("Do you want to order a pizza (yes or no): ")) 
 while True:
     if pizza_yn.lower() == "yes":
         print("\nGreat let's get started! ")
@@ -27,14 +27,14 @@ while True:
          print("\n ORDER TERMINATED\n")
          break
     
-    size = input("\nwhat size do you want your pizza to be, Large or XL: ")
-    num_toppings = str(input("you can have anwhere from 1-4 toppings "))
+    size = input("\nWhat size do you want your pizza to be (Large or XL)?  ")
+    num_toppings = str(input("How many toppings do you wish to have (1-4)?  "))
 
     if size.lower() != 'large' and size.upper() != 'XL':
-      print("Please select a valid size!")
+      print("\nPlease select a valid size!\n")
       break
     if num_toppings > '4' or num_toppings < '1':
-      print("Please enter a valid NUMBER of toppings (1-4) ")
+      print("\nPlease enter a valid NUMBER of toppings (1-4)\n ")
       break
 
     
