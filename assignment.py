@@ -43,7 +43,7 @@ while True:
         print(f"Tax: ${lg1tax:.2f}")
         print(f"Total: ${lg1tax + lGtopping1tax:.2f}")
         again = input("\nWould you like to order another pizza? ")
-        if again == 'yes':
+        if again.lower() == 'yes':
                 continue
         else:
                     print("Hope you enjoy your pizza! ")
@@ -55,7 +55,7 @@ while True:
          print(f"Total: ${lg2tax + LGtopping2tax:.2f}")
 
          again = input("\nWould you like to order another pizza? ")
-         if again == 'yes':
+         if again.lower() == 'yes':
                 continue
          else: 
             print("Hope you enjoy your pizza! ")
@@ -67,7 +67,7 @@ while True:
              print(f"Tax: ${lg3tax:.2f}")
              print(f"Total: ${lg3tax + LGtopping3tax:.2f}")
              again = input("\nWould you like to order another pizza? ")
-             if again == 'yes':
+             if again.lower() == 'yes':
                 continue
              else:
                 print("Hope you enjoy your pizza! ") 
